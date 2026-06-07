@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Metadata -->
+    <title>Awled 3eljia — Caffé, Pizzerie & Food Tunisien</title>
+    <meta name="description" content="Découvrez le menu digital d'Awled 3eljia. Le meilleur de la cuisine tunisienne authentique, grillades au feu de bois et pizzas italiennes artisanales à Tunis. Commandez sur place ou via WhatsApp." />
+    <meta name="keywords" content="Awled 3eljia, restaurant Tunis, menu digital, pizza feu de bois, cuisine tunisienne, pizzerie Tunis, kafteji, mlaoui, grillades" />
+    <meta name="author" content="Awled 3eljia" />
+    
+    <!-- Open Graph / Merchant Social Cards -->
+    <meta property="og:type" content="restaurant.menu" />
+    <meta property="og:title" content="Awled 3eljia — Caffé, Pizzerie & Food Tunisien" />
+    <meta property="og:description" content="Explorez notre menu premium interactif de spécialités artisanales tunisiennes et italiennes. Commandez en un clic !" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&h=630" />
+    <meta property="og:site_name" content="Awled 3eljia" />
+    
+    <!-- PWA Settings & Theme Color -->
+    <meta name="theme-color" content="#FF6B00" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Aljiya Menu" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="https://img.icons8.com/color/192/000000/restaurant.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Google Structured Data (JSON-LD) for Local Restaurant SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Awled 3eljia",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800",
+        "@id": "https://awled-3eljia-menu-945402458334.europe-west2.run.app",
+        "url": "https://awled-3eljia-menu-945402458334.europe-west2.run.app",
+        "telephone": "+21698765432",
+        "priceRange": "$$",
+        "menu": "https://awled-3eljia-menu-945402458334.europe-west2.run.app/#menu-section",
+        "servesCuisine": ["Tunisian", "Italian", "Pizza", "Grill"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenue Hédi Nouira, Ennasr 2",
+          "addressLocality": "Tunis",
+          "addressCountry": "TN"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "11:00",
+          "closes": "23:59"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Register PWA Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((reg) => {
+              console.log('Awled 3eljia ServiceWorker registration successful with scope: ', reg.scope);
+            })
+            .catch((err) => {
+              console.error('Awled 3eljia ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+
